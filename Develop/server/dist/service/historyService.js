@@ -10,7 +10,7 @@ class City {
 // TODO: Complete the HistoryService class
 class HistoryService {
     constructor() {
-        this.filePath = path.join(process.cwd(), 'db', 'searchHistory.json');
+        this.filePath = path.join(process.cwd(), 'server', 'db', 'searchHistory.json');
     }
     // TODO: Define a read method that reads from the searchHistory.json file
     async read() {
