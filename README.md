@@ -34,6 +34,9 @@ N/A
 - History does not populate correctly, db files not creating in dist
 - 5-day forcast does not populate due to the use of the free weather API. The 5-day-forcast feature with the starter code requires a paid version.
 
+- ![image](https://github.com/user-attachments/assets/32e1486a-073b-424a-babb-83772ee5d388)
+
+
 ## Questions
 If you have any questions about the project, you can reach out to me at:
 - GitHub: [Cinnlight](https://github.com/Cinnlight)
