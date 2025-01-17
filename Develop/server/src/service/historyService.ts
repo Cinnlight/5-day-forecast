@@ -31,6 +31,8 @@ class HistoryService {
   // TODO: Define a write method that writes the updated cities array to the searchHistory.json file
   private async write(cities: City[]): Promise<void> {
     try {
+      // Ensure the directory exists
+      await fs.promises.mkdir(path.dirname(this.filePath), { recursive: true });
       const data = JSON.stringify(cities, null, 2);
       await fs.promises.writeFile(this.filePath, data, 'utf-8');
     } catch (error) {
