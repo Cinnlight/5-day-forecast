@@ -20,6 +20,12 @@ class HistoryService {
   // TODO: Define a read method that reads from the searchHistory.json file
   private async read(): Promise<City[]>{
     try{
+      // Ensure the directory exists
+      await fs.promises.mkdir(path.dirname(this.filePath), { recursive: true });
+      // Ensure the file exists
+      if (!fs.existsSync(this.filePath)) {
+        await fs.promises.writeFile(this.filePath, '[]', 'utf-8');
+      }
       const data = await fs.promises.readFile(this.filePath, 'utf-8');
       return JSON.parse(data);
     } catch (error) {
